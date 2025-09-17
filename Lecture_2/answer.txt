@@ -1,0 +1,8 @@
+After I renamed hello_world.txt to hello_world.exe, double-clicking the file could not be opened anymore on MacOS, so I had to open it in Parallels where I also got a not executable error. The bytes, however, remained unchanged in the hex viewer.
+
+Furthermore, after chmod 400 I got the notification "The file “hello_world.txt” is locked" and could not make any more changes.
+
+I was able to acquire the following data on my M3 Max Macbook:
+1. 1 physical disk: /dev/disk0 (diskutil list)
+2. Model: Apple SSD AP2048Z (diskutil info disk0), capacity: 2TB (diskutil info disk0), read speed: 3100MB/s (website), write speed: 300MB/s (website)
+3. I have 3 partitions: Apple_APFS_ISC (disk1): 524MB for firmware, Apple_APFS_Recovery (disk2): 5.4GB for recovery & Apple_APFS (disk3): 2,0TB for Macintosh HD, Preboot, Recovery, Data and VM

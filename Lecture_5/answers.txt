@@ -1,0 +1,10 @@
+IP Address, Routing & Webrequests
+1. 	IP address: 77.249.55.183
+	Local IP: 10.82.1.195
+	Default gateway: 10.82.1.1
+2. Yes, with the VPN my IP address got changed to: 2001:610:450:40::2:45 (IPv6)
+3. 	Public IP: 77.249.55.183
+	Private IP: 10.82.1.195
+4.  The geo-location is Amsterdam, North Holland, The Netherlands
+5. The first hop is my local router and the last hop is Google's Amsterdam server. It went from a private router to a public Google server.
+6. My Google searches go through Google's Amsterdam PoP. This is the entry point to Google's edge server (ams17s08-in-f3.1e100.net).

@@ -1,0 +1,7 @@
+Hello world!
+World = 77 6F 72 6C 64
+hello_world.doc offset at 0x1840th byte
+Position of image data of hello_world(1bit).bmp = 63th byte
+Position of image data of hello_world(24bit).bmp = 55th byte
+
+

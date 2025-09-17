@@ -1,0 +1,16 @@
+Device Drivers:
+1. There are 256 drivers running on my system (kmutil showloaded | wc -l).
+2. Wi-Fi and network drivers:
+a. Wi-Fi driver (family): IO80211Family;
+	path: /System/Library/Extensions/IO80211Family.kext;
+	loaded as: com.apple.iokit.IO80211Family (1200.13.1)
+b. Ethernet networking: IONetworkingFamily;
+	path: /System/Library/Extensions/IONetworkingFamily.kext;
+	loaded as: com.apple.iokit.IONetworkingFamily (3.4)
+c. USB networking: AppleUSBNetworking;
+	path: /System/Library/Extensions/AppleUSBNetworking.kext;
+	loaded as: com.apple.driver.usb.networking (5.0.0)
+
+Process:
+1. Safari is using about 247 MB of RAM and 6.4% of the CPU.
+2. Safari install location: /Applications/Safari.app.

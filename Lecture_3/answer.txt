@@ -1,0 +1,18 @@
+Component Identification:
+1. CPU: Apple M4 with 10 cores (system_profiler SPHardwareDataType).
+2. RAM: 24GB unified memory, Type = LPDDR5 (system_profiler SPMemoryDataType).
+3. GPU: Apple M4 with 10 cores (SPDisplaysDataType), but there is no separate VRAM or iGPU on Apple Silicon. The GPU therefore uses op to 24GB of unified memory as VRAM.
+4. Firmware: 11881.140.96 (SPHardwareDataType), last update on 10/09/2025 
+*Core/RAM Speed are not acquirable except for on the Apple Website .
+
+Boot order:
+1. Shut the Mac down.
+2. Press and hold the bower button till a notification appears of loading startup options.
+3. Select Macintosh HD or an external drive.
+4. Click continue to set up your laptop with the chosen disk.
+
+Screen Resolution:
+1. Current Resolution: 2560 x 1664 (Liquid Retina).
+2. On macOS you you are not able to rotate the built-in screen in System Settings. If, however, rotations were enabled, the display would be turned 90° into portrait mode.
+3. Texts and icons become lager and more square shaped. Furthermore the resolution lowers.
+
