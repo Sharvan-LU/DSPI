@@ -1,0 +1,7 @@
+What is your name? This process is not trusted! Input event monitoring will not be possible until it is added to accessibility clients.
+Sharvan
+Welcome to start Sharvan!
+What is your favorite number? 3
+Based on your number, I think the following calculation will result in the number 42.
+Calculating answer ...
+The answer is: 42
