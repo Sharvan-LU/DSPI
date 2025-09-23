@@ -1,0 +1,16 @@
+type savings start
+    number[*]
+end
+
+var my_savings is savings
+var total_savings is number
+
+my_savings = savings()
+my_savings[0] = 1000
+my_savings[1] = 15000
+my_savings[2] = 932
+
+total_savings -> my_savings[0] + my_savings[1] +my_savings[2]
+
+print("My savings accounts have the following amounts: ", my_savings)
+print("which total: ", total_savings)

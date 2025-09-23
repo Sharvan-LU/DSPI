@@ -1,0 +1,29 @@
+var name is text
+var favorite_number is number
+var result is number
+
+print_raw("What is your name? ")
+name -> input_text()
+print_raw("Welcome to start ", name, "!\n")
+
+print_raw("What is your favorite number? ")
+favorite_number -> input_number()
+print("Based on your number, I think the following calculation will result in the number 42.")
+
+print("Calculating answer ...")
+sleep(1)
+
+# add 42 to your number
+result -> +(favorite_number, 42)
+
+# multiple by 7
+result -> *(result, 7)
+
+# add the sqrt of 49
+result -> result + (49 ^ 0.5)  # to the power of 0.5 is the same as the sqrt
+
+# Now, subtract your number plus 1 times 7
+result -> result - ((favorite_number + 1) * 7)
+
+# finally, divide by 7
+print("The answer is:", result / 7)
