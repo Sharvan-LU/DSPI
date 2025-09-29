@@ -1,18 +1,23 @@
-var threshold is number
-threshold -> 18
+function greet is void
+start
+    var threshold is number
+    threshold -> 18
 
-var validity is number
-var name is text
-var age is number
+    var validity is number
+    var name is text
+    var age is number
 
+    print_raw("Hello, what is your name?")
+    name -> input_text()
+    print_raw("Nice to meet you,", name, ", how old are you?")
+    age -> input_number()
 
-print_raw("Hello, what is your name?")
-name -> input_text()
-print_raw("Nice to meet you,", name, ", how old are you?")
-age -> input_number()
+    validity -> (age >= threshold)
 
-validity -> (age >= threshold)
+    print("Hello,", name, "!")
+    print("Welcome to the DSPI course!")
+    print("Drink beer:", validity)
+    return
+end
 
-print("Hello,", name, "!")
-print("Welcome to the DSPI course!")
-print("Drink beer:", validity)
+greet()
