@@ -1,0 +1,15 @@
+var total_viewers is number
+var land is text 
+var viewers_from_NL is number
+
+print("Enter the total number of viewers:")
+total_viewers -> input_number()
+print("Enter where  the specific viewers are from:")
+land -> input_text()
+print("Enter what number of viewers is from the Netherlands:")
+viewers_from_NL -> input_number()
+
+print("What is the total number of viewers:", total_viewers)
+print("Where are the specific viewers from:", land)
+print("What number of viewers is from The Netherlands", viewers_from_NL)
+print("The percentage of viewers from the Netherlands is:", /(total_viewers, viewers_from_NL), "%")

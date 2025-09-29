@@ -1,0 +1,30 @@
+type grade start
+    number[*]
+end
+
+var pass_grades is number
+var fail_grades is number
+var grades is grade
+var threshold is number
+var pass is text
+var fail is text
+
+threshold -> 6
+
+pass -> "a pass is 6 or higher."
+fail -> "a fail is lower then 6."
+
+grades = grade()
+grades[0] = 4
+grades[1] = 8.5
+grades[2] = 6
+grades[3] = 7
+grades[4] = 5.5
+
+
+pass_grades -> (grades[0] >= threshold ) + ( grades[1] >= threshold ) + ( grades[2] >= threshold ) + ( grades[3] >= threshold ) + ( grades[4] >= threshold )
+fail_grades= <(grades[0],threshold) + <(grades[1],threshold) + <(grades[2],threshold) + <(grades[3],threshold) + <(grades[4],threshold)
+
+print("Given the grades", grades)
+print(pass_grades, "passing grade(s) ;", pass)
+print(fail_grades, "failing grade(s) ;", fail)
