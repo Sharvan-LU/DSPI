@@ -1,0 +1,24 @@
+var counter is number
+var answer is number
+var value is number
+
+answer -> random(100)
+counter -> 0
+
+while !(value == answer) start
+    
+    print_raw("Guess the number between 0 and 100: ")
+    value -> input_number()
+    
+    counter -> counter + 1
+
+    if value > answer start
+        print("Too high")
+    end else start
+        if value < answer start
+            print("Too low")
+        end
+    end
+end
+
+print("You got it right after", counter, "attempts!")

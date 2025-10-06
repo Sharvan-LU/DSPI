@@ -1,0 +1,32 @@
+type numbers start
+    number[*]
+end
+
+var grades is numbers
+grades = numbers() #Always instantiate custom types, start empty array
+grades[0] -> 6
+grades[1] -> 3
+grades[2] -> 6
+grades[3] -> 8
+grades[4] -> 10
+
+function collection is number
+    arg grades is numbers
+
+start
+    var counter is number
+    var sum is number
+
+    counter -> 0
+    sum -> 0
+
+    while counter < len(grades) start
+        sum -> sum + grades[counter]
+        counter -> counter + 1
+    end
+    return sum / len(grades)
+end
+
+var average is number
+average -> collection(grades)
+print("The grades", grades, "have an average grade of", average)

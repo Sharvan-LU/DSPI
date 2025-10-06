@@ -1,0 +1,18 @@
+var value is number
+
+function even_odd is text
+    arg value is number
+start
+    var result is text
+    if (value %2) == 0 start
+       result -> "even"
+    end else start
+        result -> "uneven"
+    end
+    return result
+end
+
+print_raw("Enter the number you want to check: even or odd? ")
+value -> input_number()
+
+print_raw("The number ", value, " is ", even_odd(value))

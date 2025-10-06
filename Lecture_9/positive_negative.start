@@ -1,0 +1,22 @@
+var value is number
+
+function positive_negative is text
+    arg value is number
+start
+var result is text
+    if value > 0 start
+        result -> "positive"
+    end else start
+        if value < 0 start
+            result -> "negative"
+        end else start
+            result -> "zero"
+        end
+    end
+    return result
+end
+
+print_raw("Enter the number you want to check: positive, negative, or zero? ")
+value -> input_number()
+
+print("The number", value, "is", positive_negative(value))

@@ -1,0 +1,16 @@
+# declare a counter
+var counter is number
+
+# ask the user for an counter
+print_raw("start counter: ")
+counter -> input_number()
+
+when counter < 0 start
+    exit
+end
+
+# infinitely loop and each step decrease the counter by 1
+while 1 start
+    print("current counter is:", counter)
+    counter := counter - 1
+end

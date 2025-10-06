@@ -1,0 +1,15 @@
+var value is number
+
+function check is number
+    arg value is number
+start
+    if value < 0 start
+        value -> 0
+    end
+return value
+end 
+
+print_raw("Which number do you want to check? ")
+value -> check(input_number())
+
+print_raw("The value is ", value)

@@ -1,0 +1,43 @@
+type words start
+    text[*]
+end
+
+
+function concatenate is words
+    arg w1 is words
+    arg w2 is words
+start
+    var counter is number
+    counter -> 0
+    var concatenated is words
+    concatenated = words()
+
+    while counter < len(w1) start
+        concatenated[counter] -> w1[counter]
+        counter -> counter + 1
+    end
+
+    while counter < (len(w1) + len(w2)) start
+        concatenated[counter] -> w2[counter-len(w1)]
+        counter -> counter + 1
+    end
+
+return concatenated
+end
+
+var w1 is words
+var w2 is words
+w1 = words()
+w1[0] = "This"
+w1[1] = "is"
+w1[2] = "a"
+w1[3] = "sentence"
+
+w2 = words()
+w2[0] = "Here"
+w2[1] = "is"
+w2[2] = "another"
+w2[3] = "sentence"
+w2[4] = "again"
+
+print(concatenate(w1, w2))

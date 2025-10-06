@@ -1,0 +1,20 @@
+var value is number
+
+function natural_numbers is number
+    arg value is number
+start
+    var counter is number
+    var sum is number
+    counter -> 0 #Makes it such that we only use natural numbers
+    sum -> 0
+
+    while counter < value start
+        counter -> counter + 1
+        sum -> counter + sum
+    end
+    return sum
+end
+
+print_raw("Enther the last natural number to sum:" )
+value -> input_number()
+print("The sum of natural numbers up to and including", value, "is", natural_numbers(value))

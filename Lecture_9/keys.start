@@ -1,0 +1,25 @@
+var counter is number
+var previous is number
+counter -> 0
+previous -> counter-1
+
+when key("w") start
+    counter = counter + 1
+end
+
+when key("s") start
+    counter = counter - 1
+end
+
+when key("q") start
+    exit
+end
+
+while 1 start
+    if !(counter == previous) start
+        print("Current counter is: ", counter)
+        previous = counter
+    end 
+    sleep(0.08)
+end
+   
