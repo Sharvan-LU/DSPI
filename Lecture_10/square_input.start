@@ -1,0 +1,33 @@
+type numbers start
+    number[*]
+end
+
+var list is numbers
+list = numbers()
+list[0] = 1
+list[1] = 2
+list[2] = 3
+list[3] = 4
+list[4] = 5
+list[5] = 6
+list[6] = 7
+list[7] = 8
+list[8] = 9
+list[9] = 10
+
+function square is numbers
+    arg list is numbers
+start
+    var squares is numbers
+    squares = numbers()
+    var counter is number
+    counter -> 0
+
+    while len(squares) < len(list) start
+        squares[counter] -> (list[counter]*list[counter])
+        counter -> counter + 1
+    end
+return squares
+end
+
+print("The square of the whole numbers are:", square(list))

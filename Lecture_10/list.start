@@ -1,0 +1,49 @@
+type list start
+    number[*]
+
+    function append is void
+        arg l is list
+        arg n is number
+    start
+       l[len(l)] -> n
+        return        
+   
+    end
+
+    function remove is void
+        arg l is list
+        arg n is number
+    start
+        var l2 is list
+        l2 -> list()
+
+        var counter is number
+        counter -> 0
+
+        while counter < len(l) start
+            if !(l[counter] == n) start
+                list.append(l2, l[counter])
+            end
+            counter -> counter + 1
+        end
+    l := l2
+    return
+  end
+end
+
+var grades is list
+grades -> list()
+
+list.append(grades, 4)
+list.append(grades, 5)
+list.append(grades, 2)
+list.append(grades, 10)
+list.append(grades, 9)
+list.append(grades, 5)
+print(grades)
+
+list.append(grades, 8)
+print(grades)
+
+list.remove(grades, 5)
+print(grades)
