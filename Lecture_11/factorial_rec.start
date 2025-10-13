@@ -1,0 +1,16 @@
+function factorial is number
+    arg n is number
+start
+    var product is number
+    if n == 1 start
+        return 1
+    end
+    product -> n * factorial(n-1)
+    return product
+end
+
+print_raw("Which number do you want to convert to its factorial value? ")
+var n is number
+n -> input_number()
+
+print(n, "factorial is", factorial(n))

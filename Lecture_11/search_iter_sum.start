@@ -1,0 +1,39 @@
+type words start
+    text[*]
+end
+
+function search is number
+    arg n is words
+    arg word is text
+start
+    var counter is number
+    counter -> 0
+    var sum is number
+    sum -> 0
+    
+    while counter < len(n) start
+        if n[counter] == word start
+            sum -> sum + 1
+        end
+        counter -> counter + 1
+    end
+    return sum
+end
+
+var sentence is words
+sentence = words()
+sentence[0] = "Let"
+sentence[1] = "us"
+sentence[2] = "look"
+sentence[3] = "for"
+sentence[4] = "specific"
+sentence[5] = "words"
+sentence[6] = "in"
+sentence[7] = "a"
+sentence[8] = "sentence"
+
+print_raw("What word are you looking for? ")
+var word is text
+word -> input_text() 
+
+print("Does the sentence,", sentence, "contain the word", word, ":", search(sentence, word))

@@ -1,0 +1,49 @@
+type words start
+    text[*]
+end
+
+function helper is words
+    arg n is words
+start
+    var new is words
+    new = words()
+    var counter is number
+    counter -> 1
+
+    while counter < len(n) start
+        new[counter-1] = n[counter]
+        counter -> counter + 1
+    end
+    return new
+end
+
+function search is number
+    arg n is words
+    arg word is text
+start
+    if len(n) == 0 start
+        return 0
+    end
+    if n[0] == word start
+        return 1
+    end
+    return search(helper(n), word)
+end
+
+var sentence is words
+sentence = words()
+sentence[0] = "Let"
+sentence[1] = "us"
+sentence[2] = "look"
+sentence[3] = "for"
+sentence[4] = "specific"
+sentence[5] = "words"
+sentence[6] = "in"
+sentence[7] = "a"
+sentence[8] = "sentence"
+
+print_raw("What word are you looking for? ")
+var word is text
+word -> input_text() 
+
+print("Does the sentence,", sentence, "contain the word", word, ":", search(sentence, word))

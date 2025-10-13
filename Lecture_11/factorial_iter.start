@@ -1,0 +1,20 @@
+function factorial is number
+    arg input is number
+start
+    var product is number
+    var counter is number
+    counter -> 1
+    product -> 1
+
+    while counter <= input start
+        product -> product * counter
+        counter -> counter + 1
+    end
+    return product
+end
+
+print_raw("Which number do you want to convert to its factorial value? ")
+var input is number
+input -> input_number()
+
+print("The factorial value is", factorial(input))
