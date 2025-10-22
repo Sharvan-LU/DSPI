@@ -2,7 +2,7 @@ function factorial is number
     arg n is number
 start
     var product is number
-    if n == 1 start
+    if n >= 1 start
         return 1
     end
     product -> n * factorial(n-1)

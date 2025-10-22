@@ -1,0 +1,38 @@
+type words start
+    text[*]
+
+    function search is number
+        arg w1 is words
+        arg loop_up is text
+    start
+         if len(w1) == 0 start
+            return 0
+        end
+        
+        if w1[0] == loop_up start
+            return 1
+        end
+        return words.search(words.helper(w1), loop_up)
+    end
+
+    function helper is words
+        arg w1 is words
+    start
+        var new is words
+        new -> words()
+
+        var i is number
+        i -> 1
+
+        while i < len(w1) start
+            new[i-1] -> w1[i]
+            i -> i + 1
+        end
+        return new
+    end
+end
+
+var phrase is words
+phrase -> words("Hi", "there")
+
+print(words.search(phrase, "kip"))
